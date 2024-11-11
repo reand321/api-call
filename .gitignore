@@ -1,0 +1,32 @@
+# Ignore VSCode-related files
+.vscode/
+*.code-workspace
+
+# Ignore Python-specific files
+*.pyc
+*.pyo
+__pycache__/
+
+# Ignore IDE and editor settings files
+.idea/
+*.iml
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+
+# Ignore system-specific files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Ignore sensitive or irrelevant directories
+/.git
+/node_modules/
+/bower_components/
+/vendor/
+
+# Ignore macOS-specific files
+.AppleDouble
+.LSOverride
