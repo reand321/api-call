@@ -8,6 +8,18 @@ body {
     font-family: Arial, sans-serif;
 }
 
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #333;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
 .container {
     text-align: center;
     padding: 20px;
@@ -15,7 +27,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     background-color: #fff;
-    width: 300px;
+    width: 400px;
 }
 
 .icon-placeholder {
@@ -27,7 +39,7 @@ body {
 }
 
 .icon-placeholder img {
-    width: 80px; /* Adjust the size as needed */
+    width: 80px;
     height: 80px;
     animation: pulse 1.5s infinite;
 }
@@ -44,17 +56,18 @@ body {
     }
 }
 
-
 .fact-box {
     margin-top: 20px;
-    padding: 10px;
-    min-height: 80px;
+    padding: 15px;
+    min-height: 100px;
     border: 1px dashed #bbb;
     border-radius: 5px;
     background-color: #fafafa;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    word-wrap: break-word;
 }
 
 .fetch-button {

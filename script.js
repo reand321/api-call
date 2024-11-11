@@ -1,6 +1,6 @@
 
 function playSound() {
-    const audio = new Audio('meow.mp3'); // Updated path
+    const audio = new Audio('assets/meow.mp3'); // Updated path
     audio.play().catch(error => {
         console.error("Error playing sound:", error);
     });
