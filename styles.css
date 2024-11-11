@@ -16,9 +16,10 @@ header {
 
 header h1 {
     font-size: 3rem;
-    color: #333;
+    color: #98FF98;
     margin: 0;
     font-family: 'Arial', sans-serif;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 .container {
@@ -29,6 +30,7 @@ header h1 {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     width: 400px;
+    box-sizing: border-box;
 }
 
 .icon-placeholder {
@@ -70,6 +72,7 @@ header h1 {
     align-items: center;
     width: 100%;
     word-wrap: break-word;
+    box-sizing: border-box;
 }
 
 .fetch-button {
@@ -80,4 +83,14 @@ header h1 {
     color: #007bff;
     font-size: 16px;
     text-decoration: underline;
+}
+
+#language-button {
+    margin-top: 20px;
+    cursor: pointer;
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
 }

@@ -1,17 +1,10 @@
+let currentLanguage = 'en';
 
-function playSound() {
-    const audio = new Audio('assets/meow.mp3'); // Updated path
-    audio.play().catch(error => {
-        console.error("Error playing sound:", error);
-    });
-}
-
-
-async function fetchCatFact() {
+async function fetchCatFact(language = 'en') {
     const factBox = document.getElementById('fact-box');
     factBox.textContent = "Loading...";
     try {
-        const response = await fetch("https://meowfacts.herokuapp.com/");
+        const response = await fetch(`https://meowfacts.herokuapp.com/?lang=${language}`);
         if (!response.ok) throw new Error("Failed to fetch fact");
         const data = await response.json();
         factBox.textContent = data.data || "No fact available.";
@@ -20,9 +13,21 @@ async function fetchCatFact() {
     }
 }
 
-
 const icon = document.getElementById('icon');
 icon.addEventListener('click', () => {
     playSound();
-    fetchCatFact();
+    fetchCatFact(currentLanguage);
 });
+
+const languageButton = document.getElementById('language-button');
+languageButton.addEventListener('click', () => {
+    currentLanguage = currentLanguage === 'en' ? 'es' : 'en';
+    fetchCatFact(currentLanguage);
+});
+
+async function playSound() {
+    const audio = new Audio('assets/meow.mp3');
+    audio.play().catch(error => {
+        console.error("Error playing sound:", error);
+    });
+}
