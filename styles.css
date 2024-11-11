@@ -1,28 +1,83 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MeowFacts</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>MeowFacts</h1>
-    </header>
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f8ff;
+    font-family: Arial, sans-serif;
+}
 
-    <div class="container">
-        <button id="language-button">Change Language</button>
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
-        <div class="icon-placeholder">
-            <img src="https://github.com/yourusername/yourrepositoryname/raw/main/assets/cat.gif" alt="Cat Icon" id="icon" />
-        </div>
+header h1 {
+    font-size: 3rem;
+    color: #333;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
 
-        <div class="fact-box" id="fact-box">
-            Your cat fact will appear here!
-        </div>
-    </div>
+.container {
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    width: 400px;
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+.icon-placeholder {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.icon-placeholder img {
+    width: 80px;
+    height: 80px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.fact-box {
+    margin-top: 20px;
+    padding: 15px;
+    min-height: 100px;
+    border: 1px dashed #bbb;
+    border-radius: 5px;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+.fetch-button {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    cursor: pointer;
+    color: #007bff;
+    font-size: 16px;
+    text-decoration: underline;
+}
