@@ -1,10 +1,8 @@
-let currentLanguage = 'en';
-
-async function fetchCatFact(language = 'en') {
+async function fetchCatFact() {
     const factBox = document.getElementById('fact-box');
     factBox.textContent = "Loading...";
     try {
-        const response = await fetch(`https://meowfacts.herokuapp.com/?lang=${language}`);
+        const response = await fetch("https://meowfacts.herokuapp.com/");
         if (!response.ok) throw new Error("Failed to fetch fact");
         const data = await response.json();
         factBox.textContent = data.data || "No fact available.";
@@ -16,13 +14,7 @@ async function fetchCatFact(language = 'en') {
 const icon = document.getElementById('icon');
 icon.addEventListener('click', () => {
     playSound();
-    fetchCatFact(currentLanguage);
-});
-
-const languageButton = document.getElementById('language-button');
-languageButton.addEventListener('click', () => {
-    currentLanguage = currentLanguage === 'en' ? 'es' : 'en';
-    fetchCatFact(currentLanguage);
+    fetchCatFact();
 });
 
 async function playSound() {
