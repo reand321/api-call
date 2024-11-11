@@ -7,7 +7,7 @@ body {
     margin: 0;
     background-color: #f0f8ff;
     font-family: Arial, sans-serif;
-    background-image: url('assets/Pistachio.jpg');
+    background-image: url('assets/Pistachio.jpg'); /* Replace with your image path */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -20,7 +20,7 @@ header {
 
 header h1 {
     font-size: 3rem;
-    color: #33cccc;
+    color: #98FF98;
     margin: 0;
     font-family: 'Arial', sans-serif;
     text-shadow: 2px 2px 4px #000000;
@@ -44,6 +44,10 @@ header h1 {
     align-items: center;
     cursor: pointer;
     margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
 }
 
 .icon-placeholder img {
@@ -70,7 +74,7 @@ header h1 {
     min-height: 100px;
     border: 1px dashed #bbb;
     border-radius: 5px;
-    background-color: #fafafa;
+    background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
